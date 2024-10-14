@@ -1,16 +1,17 @@
 import { Component } from '@angular/core';
-import { TasksComponent } from "./components/tasks/tasks.component";
-import { TASKS, Tasks} from "../../mock-tasks";
+import { TASKS} from "../../mock-tasks";
+import { Task } from '../../Task';
+import { TaskItemComponent } from "../task-item/task-item.component";
 
 
 @Component({
   selector: 'app-tasks',
   standalone: true,
-  imports: [],
+  imports: [TaskItemComponent],
   templateUrl: './tasks.component.html',
   styleUrl: './tasks.component.css'
 })
-export class TasksComponent {
+export class tasksComponent {
   tasks: Task[] = TASKS;
 
   constructor() {}
